@@ -1,12 +1,29 @@
 package io.github.jeffmmartins.Produtos.API.model;
 
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 // POJO - java puro;
+@Entity
+@Table(name = "produto")
 public class Produto {
+
+    @Id
+    @Column
     private String id;
+
+    @Column
     private String nome;
+
+    @Column
     private String descricao;
+
+    @Column
     private Double preco;
+
 
     public Produto(String id, String nome, String descricao, Double preco) {
         this.id = id;
