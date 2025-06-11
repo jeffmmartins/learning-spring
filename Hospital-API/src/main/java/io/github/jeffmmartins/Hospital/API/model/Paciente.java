@@ -3,8 +3,10 @@ package io.github.jeffmmartins.Hospital.API.model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "paciente")
 public class Paciente {
     @Id
     @Column
@@ -15,6 +17,8 @@ public class Paciente {
     private Integer idade;
     @Column
     private String endereco;
+
+    public Paciente(){}
 
     public Paciente(String id, String nome, int idade, String endereco) {
         this.id = id;
