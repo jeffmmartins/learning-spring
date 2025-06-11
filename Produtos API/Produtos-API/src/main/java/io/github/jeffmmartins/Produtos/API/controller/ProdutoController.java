@@ -39,4 +39,11 @@ public class ProdutoController {
         repositoryProdutos.deleteById(id);
     }
 
+    @PutMapping("{id}")
+    //RequestBody pega o copor da requisição e transforma em um objeto
+    public void atualizar(@PathVariable("id") String id, @RequestBody Produto produto){
+        produto.setId(id);
+        repositoryProdutos.save(produto);
+    }
+
 }
