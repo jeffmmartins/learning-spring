@@ -24,4 +24,11 @@ public class PacienteController {
         pacienteRepository.save(paciente);
         return paciente;
     }
+
+    @GetMapping("/{id}") // lidar com as requisições http tipo get
+    //Pathvariable -> pega o valor que está no getmapping e atribui a variavel string id do metodo.
+    public Paciente obterPorId(@PathVariable("id") String id){
+        // pesquisa pelo id, e retorna paciente.
+        return pacienteRepository.findById(id).orElse(null);
+    }
 }
