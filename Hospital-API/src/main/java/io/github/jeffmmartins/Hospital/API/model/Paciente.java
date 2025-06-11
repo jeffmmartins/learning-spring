@@ -1,9 +1,19 @@
 package io.github.jeffmmartins.Hospital.API.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Paciente {
+    @Id
+    @Column
     private String id;
+    @Column
     private String nome;
+    @Column
     private Integer idade;
+    @Column
     private String endereco;
 
     public Paciente(String id, String nome, int idade, String endereco) {
