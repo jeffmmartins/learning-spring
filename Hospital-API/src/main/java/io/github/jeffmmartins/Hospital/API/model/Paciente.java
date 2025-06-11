@@ -3,7 +3,7 @@ package io.github.jeffmmartins.Hospital.API.model;
 public class Paciente {
     private String id;
     private String nome;
-    private int idade;
+    private Integer idade;
     private String endereco;
 
     public Paciente(String id, String nome, int idade, String endereco) {
@@ -29,11 +29,11 @@ public class Paciente {
         this.nome = nome;
     }
 
-    public int getIdade() {
+    public Integer getIdade() {
         return idade;
     }
 
-    public void setIdade(int idade) {
+    public void setIdade(Integer idade) {
         this.idade = idade;
     }
 
