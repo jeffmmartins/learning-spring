@@ -49,7 +49,8 @@ public class ProdutoController {
 
     @GetMapping
     public List<Produto> buscar(@RequestParam("nome") String nome){
-
+        // chamando pelo metodo criado no repository
+        return repositoryProdutos.findByNome(nome);
     }
 
 }

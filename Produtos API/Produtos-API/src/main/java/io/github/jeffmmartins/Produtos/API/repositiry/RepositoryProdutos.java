@@ -10,5 +10,5 @@ public interface RepositoryProdutos extends JpaRepository<Produto, String> {
     //metodo que vai ser utilizado para buscar produto pelo nome;
     List<Produto> findByNome(String nome);
 
-    }
+
 }
