@@ -4,6 +4,7 @@ import io.github.jeffmmartins.Produtos.API.model.Produto;
 import io.github.jeffmmartins.Produtos.API.repositiry.RepositoryProdutos;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -44,6 +45,11 @@ public class ProdutoController {
     public void atualizar(@PathVariable("id") String id, @RequestBody Produto produto){
         produto.setId(id);
         repositoryProdutos.save(produto);
+    }
+
+    @GetMapping
+    public List<Produto> buscar(@RequestParam("nome") String nome){
+
     }
 
 }
