@@ -4,6 +4,7 @@ import io.github.jeffmmartins.Hospital.API.model.Paciente;
 import io.github.jeffmmartins.Hospital.API.repository.PacienteRepository;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -32,9 +33,20 @@ public class PacienteController {
         return pacienteRepository.findById(id).orElse(null);
     }
 
-    @DeleteMapping("{/id}")
+    @DeleteMapping("/{id}")
     public void deletePorId(@PathVariable("id") String id){
         //localização feita pelo id mas é deletado o objeto
         pacienteRepository.deleteById(id);
+    }
+
+    @PutMapping("/{id}")
+    public void atualizarPorId(@PathVariable("id") String id, @RequestBody Paciente paciente){
+        paciente.setId(id);
+        pacienteRepository.save(paciente);
+    }
+
+    @GetMapping
+    public List<Paciente> buscar(@RequestParam("nome") String nome){
+
     }
 }
