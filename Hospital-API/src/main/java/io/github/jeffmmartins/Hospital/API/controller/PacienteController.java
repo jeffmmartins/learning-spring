@@ -47,6 +47,6 @@ public class PacienteController {
 
     @GetMapping
     public List<Paciente> buscar(@RequestParam("nome") String nome){
-
+        return pacienteRepository.findByNome(nome);
     }
 }

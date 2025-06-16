@@ -10,5 +10,5 @@ import java.util.List;
 public interface PacienteRepository extends JpaRepository<Paciente, String> {
 
     // em nome é de acordo com o atributo que tem no objeto.
-    List<Paciente> findByNome (String nome);
+    List<Paciente> findByNome(String nome);
 }
