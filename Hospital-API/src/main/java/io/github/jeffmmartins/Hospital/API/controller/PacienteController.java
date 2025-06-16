@@ -31,4 +31,10 @@ public class PacienteController {
         // pesquisa pelo id, e retorna paciente.
         return pacienteRepository.findById(id).orElse(null);
     }
+
+    @DeleteMapping("{/id}")
+    public void deletePorId(@PathVariable("id") String id){
+        //localização feita pelo id mas é deletado o objeto
+        pacienteRepository.deleteById(id);
+    }
 }
