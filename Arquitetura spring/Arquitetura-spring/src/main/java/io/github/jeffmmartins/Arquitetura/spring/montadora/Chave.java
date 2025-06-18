@@ -2,7 +2,7 @@ package io.github.jeffmmartins.Arquitetura.spring.montadora;
 
 public class Chave {
     private Montadora montadora;
-    private TipoMotor tipo;
+    private String tipo;
 
     public Montadora getMontadora() {
         return montadora;
@@ -12,11 +12,11 @@ public class Chave {
         this.montadora = montadora;
     }
 
-    public TipoMotor getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(TipoMotor tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 }
