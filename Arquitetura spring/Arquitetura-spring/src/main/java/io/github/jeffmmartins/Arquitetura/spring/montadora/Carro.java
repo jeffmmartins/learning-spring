@@ -8,7 +8,7 @@ public class Carro {
     private Motor motor;
     private Montadora montador;
 
-    // quando for instanciar tem que passar o motor;
+    // quando for instanciar tem que passar o motor; carro depende do motor e o motor é uma dependêcia do carro
     public Carro(Motor motor) {
         this.motor = motor;
     }
