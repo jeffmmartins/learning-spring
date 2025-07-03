@@ -2,6 +2,7 @@ package io.github.jeffmmartins.Arquitetura.spring.todos;
 
 import org.springframework.stereotype.Service;
 
+// Camada Lógica.
 @Service
 public class TodoService {
 
@@ -17,5 +18,15 @@ public class TodoService {
         // ao ser salvo já retorna com o id populado;
         return todoRepository.save(novoTodo);
     }
+
+    public void atualizarStatus(TodoEntity todo){
+        //serve para atualizar;
+        todoRepository.save(todo);
+    }
+
+    public TodoEntity buscarPorId(Integer id){
+        return todoRepository.findById(id).orElse(null);
+    }
+
 
 }
