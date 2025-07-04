@@ -1,5 +1,8 @@
 package io.github.jeffmmartins.Arquitetura.spring.todos;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class TodoValidator {
 
     //Injeta o repository pois vai precisar acessar ele, cria o construtor para poder injetar;
@@ -11,13 +14,13 @@ public class TodoValidator {
 
     //Metodo que vai recerber um todoEntity para validar
     public void validar(TodoEntity todo){
-        if (existeTodoComDescrição(todo.getDescricao())){
+        if (existeTodoComDescricao(todo.getDescricao())){
             //Exceção padrão
             throw new IllegalArgumentException("Já existe o todo");
         }
     }
 
-    public boolean existeTodoComDescrição(String descricao){
-        return todoRepository.existByDescricao(descricao);
+    public boolean existeTodoComDescricao(String descricao){
+        return todoRepository.existsByDescricao(descricao);
     }
 }
