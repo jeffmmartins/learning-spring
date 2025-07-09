@@ -1,5 +1,6 @@
 package io.github.jeffmmartins.Arquitetura.spring;
 
+import io.github.jeffmmartins.Arquitetura.spring.todos.ExemploValue;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,6 +14,8 @@ public class Application {
 
 		builder.bannerMode(Banner.Mode.OFF);
 		builder.run(args);
+
+
 	}
 
 }
